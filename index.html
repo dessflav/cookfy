@@ -3,10 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cookfy</title>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Roboto:400,700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    
+  <div class="sidebar" id="sidebarID">
+  <img class="close" src="./assets/Fechar.png" alt="Button to close the sidebar" onclick="close_sidebar()">
+  <div id="sidebar_profile">
+    <img  class="photo"
+      src="assets/Avatar_feminino@2x.png"
+      width="60"
+      height="60">
+    </img>
+    <div class="name" ><span id="name_window"></span></div>
+    <br><br>
+    <div id="email"></div>
+    <div id="fone"></div>
+    <div id="monthly_plan">Plano Mensal</div>
+    <div id="days">16 dias restantes</div>
+    <div class="bar">
+      <div class="color_bar"></div>
+    </div>
+    <a href="" id="subscribe">Assinar plano anual</a>
+    <div id="adm">
+      <a href="" class="report">Reportar bug ou abuso</a>
+      <a href="" class="password">Alterar sua senha</a>
+      <a href="" class="exit">Sair</a>
+    </div>
+  </div>
+
+</div>
+    <header>
+        <div class="content">
+            <div class="elemento-2">
+            </div>
+              <h1>Cook<span>fy</span></h1>
+              <div class="search">
+                  <input type="text" class="keyword" placeholder="Pesquise alguma receita">
+                  <button class="magnifying-glass"></button>
+              </div>
+              <a class="profile-link" onclick="open_sidebar()">
+                
+                <img class="photo"
+                  alt=""
+                  src="assets/Avatar_feminino.png"
+                  width="30"
+                  height="30">
+                </img>
+              <div class="name" ><span id="name"></span></div>
+            </a>
+          <div class="receipt">
+            <div class="welcome">
+              <div id="welcome"> Bem vindo de volta</div>
+              <span id="name_welcome"></span>
+              <div class="receipt-info">
+                Contribuição da Comunidade:</br>
+                Ceviche de peixe branco </br>
+                <span>Por Michel Felipe</span>
+              </div>
+            </div>
+            <a class="dish" onclick="open_lightbox()" >
+              <div id="dish-hover">
+                Ver Foto
+              </div>
+              <img
+                src="./photos/louis-hansel-ZwpX0AJ7GV8-unsplash@2x.png"
+                width="266"
+                height="220"
+              ><img>
+            </a>
+            <div class="lightbox" id="lighboxID">
+              <div class="light-bg"></div>
+              <div class="light-content">
+                <div class="light_img">
+                  <img
+                    src="./photos/louis-hansel-ZwpX0AJ7GV8-unsplash@2x.png"
+                    width="500"
+                    height="400"
+                  ></img>
+                </div>
+                <div class="light-dir">
+                  <h3>
+                    Ceviche de peixe branco<br>
+                    <span>Por Michel Filipe</span>
+                  </h3>O ceviche é um prato de origem peruana feito com cubos de peixe que são cozidos em uma solução ácida, geralmente caldo de limão. Quando o peixe em contato com o limão, um processo químico é iniciado: a proteína do peixe se desnatura e a textura do peixe muda e o peixe fica mais saboroso. O segredo para fazer um bom ceviche é a qualidade do ingrediente principal: o peixe tem que estar bem fresco. Esse prato peruano pode ser feito com salmão, camarões e alguns contam até com manga e abacate, e o tradicional é preparado com peixe branco.
+                  <div class="light-action">
+                    <a href="#" class="light-like">Curtir</a>
+                    <a href="#" class="light-ver">Ver receita</a>
+                  </div>
+                </div>
+                <button onclick="close_lightbox()">X</button>
+              </div>
+            <div>
+          </div>          
+        </div>
+    </header>
+
+    <div id="receipt-section">
+      <div class="elemento-7"></div> 
+      <main id="last-receipt">
+           <h2>
+             Experimente algumas<br>
+             das últimas receitas
+           </h2>
+           <div>
+
+           <!-- carrosel -->
+          <div class="slideshow-container" id="carousel" height="250">
+           <div class="slides">
+               <div class="dish-content">
+                 <img src="./photos/patrick-kalkman-HkdQ0zoHT5E-unsplash.png"
+                 style="cursor: pointer;"
+                   width="480"
+                   height="280"
+                   layout="responsive">
+                 </img>
+                 <div class="dish-hover">
+                   Ver Receita
+                 </div>
+               </div>
+               <div class="dish-txt" >
+                   Adicionado Ontem
+                   <h3>Sanduíche de tomate com salada de ovos</h3>
+                   <div class="difficulty">Fácil</div>
+                   <div class="nivel">
+                     <div class="star"></div>
+                     <div class="star"></div>
+                     <div class="star white"></div>
+                     <div class="star white"></div>
+                     <div class="star white"></div>
+                   </div>
+               </div>  
+             </div>
+ 
+             <div class="slides">
+               <div class="dish-content"  >
+                 <img src="./photos/karly-gomez-lK1Q5RyD6tc-unsplash.png"
+                   style="cursor: pointer"
+                   height="280"
+                   width="480"
+                   layout="responsive"
+                   alt="">
+                 <img>
+                 <div class="dish-hover">
+                   Ver Receita
+                 </div>
+               </div>
+               <div class="dish-txt" >
+                Adicionado a 2 dias
+                <h3>Iogurte de fruta crocante</h3>
+                <div class="difficulty">Difícil</div>
+                <div class="nivel">
+                  <div class="star"></div>
+                  <div class="star"></div>
+                  <div class="star"></div>
+                  <div class="star"></div>
+                  <div class="star white"></div>
+                </div>
+            </div>   
+              </div>
+                <img class="" src="./assets/Seta_esquerda.png" onclick="plusSlides(-1)" >
+                <button class="next" onclick="plusSlides(1)">next</button>
+          </div>
+        </main>
+            
+        <div class="elemento-5"></div>
+      
+         <div id="gastronomic-world">
+         <div class="elemento-4"></div>
+         <div class="elemento-6"></div>
+         <main>
+           <h2>Entre no mundo gastronômico</h2>
+
+           <div id="menu">
+ 
+           <div class="kitchen"><div class="menu-button" >Cozinha</div></div>
+           <div class="patisserie"><div class="menu-button">Patisserie</div></div>
+           <div class="drinks"><div class="menu-button">Drinks</div></div>
+           </div>
+           <img 
+             src="./photos/sebastian-coman-photography-dacM7egRw0Y-unsplash@3x.png"
+             id="menu-photo"
+             alt="Mão masculina segurando um prato de doce sabor frutas vermelhas">
+          </img>
+         </main>
+       </div>
+       
+       <footer>
+         <div id="footer">
+           <div class="logo">Cook<span>fy</span></div>
+           <div class="copy">© 2020 Cookfy.</div>
+           <div id="social-media">
+             <a href="" class="fb"></a>
+             <a href="" class="ig"></a>
+             <a href="" class="tw"></a>
+             <a href="" class="in"></a>
+             <a href="" class="pin"></a>
+           </div>
+         </div>
+       </footer>
+    <script src="script.js"></script>
 </body>
-</html>
+</html> 
