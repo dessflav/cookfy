@@ -33,3 +33,12 @@ function close_lightbox() {
 }
 
 
+// sidebar
+function open_sidebar() {
+  document.getElementById("sidebarID").style.display = "block";
+}
+
+function close_sidebar() {
+  document.getElementById("sidebarID").style.display = "none";
+}
+
