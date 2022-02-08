@@ -1,3 +1,5 @@
+// api
+
 async function getRandomUser() {
   const response = await fetch("https://randomuser.me/api");
   const data = await response.json();
@@ -8,6 +10,7 @@ async function getRandomUser() {
 function displayUser(user) {
   const first_name = document.getElementById("name");
   const full_name = document.getElementById("name_c");
+  const full_name = document.getElementById("name_welcome");
   const full_name_window = document.getElementById("name_window");
   const email = document.getElementById("email");
   const phone = document.getElementById("fone");
@@ -20,3 +23,13 @@ function displayUser(user) {
 }
 
 getRandomUser();
+
+// lightbox
+function open_lightbox() {
+  document.getElementById("lighboxID").style.display = "block";
+}
+function close_lightbox() {
+  document.getElementById("lighboxID").style.display = "none";
+}
+
+
