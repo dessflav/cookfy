@@ -9,7 +9,6 @@ async function getRandomUser() {
 
 function displayUser(user) {
   const first_name = document.getElementById("name");
-  const full_name = document.getElementById("name_c");
   const full_name = document.getElementById("name_welcome");
   const full_name_window = document.getElementById("name_window");
   const email = document.getElementById("email");
