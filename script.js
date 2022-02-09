@@ -61,7 +61,7 @@ function close_lightbox() {
 
 // sidebar
 function open_sidebar() {
-  document.getElementById("sidebarID").style.display = "block";
+  document.getElementById("sidebarID").style.display="block";
   // document.getElementById("sidebarID").style.width = "450px";
   // document.getElementById("body").style.marginRight = "250px";
   // document.body.style.backgroundColor = "rgba(0,0,0,0.4)";

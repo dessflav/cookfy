@@ -92,6 +92,7 @@ html,
 body {
   max-width: 100%;
   overflow-x: hidden;
+
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -154,11 +155,12 @@ img {
   background-color: #fff;
   width: 450px;
   height: 100%;
-  z-index: 1;
+  z-index: 1001;
   display: none;
-  transition: 0.5s;
-  overflow-x: hidden;
+  overflow: hidden;
+  box-shadow: 0px 0px 0px 1000px rgba(0,0,0,0.3);
 }
+
 
 .close {
   padding: 20px 50px;
@@ -395,7 +397,6 @@ h1 span {
   color: var(--pink);
 }
 
-/* header */
 /* lightbox */
 
 .lightbox {
@@ -427,7 +428,6 @@ h1 span {
 }
 .light-content button {
   position: absolute;
-  z-index: 500;
   right: 10px;
   top: 10px;
   background: none;
