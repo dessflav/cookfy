@@ -129,6 +129,22 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
+span {
+  font-family: inherit;
+}
+:root {
+  --white: #fff;
+  --pink: #e82147;
+  --fair: PlayfairDisplay;
+}
+img {
+  object-fit: cover;
+  cursor: pointer;
+}
 
 
 /* sidebar */
@@ -462,57 +478,7 @@ h1 span {
   margin-left: 20px;
 }
 /* fim lightbox */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-a {
-  text-decoration: none;
-  color: inherit;
-}
-span {
-  font-family: inherit;
-}
-:root {
-  --white: #fff;
-  --pink: #e82147;
-  --fair: PlayfairDisplay;
-}
-img {
-  object-fit: cover;
-  cursor: pointer;
-}
+
 
 .dish {
   width: 250px;
