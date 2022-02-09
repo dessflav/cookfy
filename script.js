@@ -13,13 +13,40 @@ function displayUser(user) {
   const full_name_window = document.getElementById("name_window");
   const email = document.getElementById("email");
   const phone = document.getElementById("fone");
+ 
 
   first_name.innerText = `${user.name.first}`;
   full_name.innerText = `${user.name.first}` + " " + `${user.name.last}`;
   full_name_window.innerText = `${user.name.first}` + " " + `${user.name.last}`;
   email.innerText = `${user.email}`;
   phone.innerText = `${user.phone}`;
+
+  const avatar = user.gender;
+  switch (avatar) {
+    case "male" :
+    document.getElementById("photo").src = ("./assets/Avatar_masculino.png")
+    break;
+    default :
+    document.getElementById("photo").src = ("./assets/Avatar_feminino.png");
+  } 
+
+  switch (avatar) {
+    case "male" :
+    document.getElementById("sidebar_photo").src = ("./assets/Avatar_masculino@2x.png")
+    break;
+    default :
+    document.getElementById("sidebar_photo").src = ("./assets/Avatar_feminino@2x.png");
+  } 
+
+  switch (gender) {
+    case "female" :
+    document.getElementById("welcome").innerHTML = "Bem vinda de volta";
+    break;
+    default :
+    document.getElementById("welcome").innerHTML = "Bem vinda de volta"
+  }
 }
+
 
 getRandomUser();
 

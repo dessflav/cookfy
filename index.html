@@ -13,12 +13,13 @@
   <div class="sidebar" id="sidebarID">
   <img class="close" src="./assets/Fechar.png" alt="Button to close the sidebar" onclick="close_sidebar()">
   <div id="sidebar_profile">
-    <img  class="photo"
+    <img  class="photo" id="sidebar_photo"
       src="assets/Avatar_feminino@2x.png"
       width="60"
       height="60">
     </img>
     <div class="name" ><span id="name_window"></span></div>
+
     <br><br>
     <div id="email"></div>
     <div id="fone"></div>
@@ -47,7 +48,7 @@
               </div>
               <a class="profile-link" onclick="open_sidebar()">
                 
-                <img class="photo"
+                <img id="photo" class="photo"
                   alt=""
                   src="assets/Avatar_feminino.png"
                   width="30"
