@@ -511,6 +511,7 @@ span {
 }
 img {
   object-fit: cover;
+  cursor: pointer;
 }
 
 .dish {
@@ -520,7 +521,8 @@ img {
   text-align: center;
   position: relative;
   right: 10px;
-  cursor: pointer;
+
+
 }
 #dish-hover {
   background: #fff url("assets/Seta_direita.png") 12px center no-repeat;
@@ -535,6 +537,7 @@ img {
   z-index: 9999999;
   text-align: left;
   opacity: 0;
+
 }
 .dish:hover #dish-hover {
   transition: opacity 1s;
@@ -733,6 +736,7 @@ h2 {
   font-weight: bold;
   font-weight: bold;
   font-size: 26px;
+  cursor: pointer;
 }
 .menu-button {
   border: solid 0.5px #f0f0f0;
@@ -831,24 +835,28 @@ footer {
 }
 .fb {
   background: url("./assets/Fb@2x.png") no-repeat;
+  cursor: pointer;
 }
 .fb:hover {
   background-image: url("./assets/Fb_active@2x.png");
 }
 .ig {
   background: url("./assets/IG@2x.png") no-repeat;
+  cursor: pointer;
 }
 .ig:hover {
   background-image: url("./assets/IG_active@2x.png");
 }
 .tw {
   background: url("./assets/Twitter@2x.png") no-repeat;
+  cursor: pointer;
 }
 .tw:hover {
   background-image: url("./assets/Twitter_active@2x.png");
 }
 .in {
   background: url("./assets/Linkedin@2x.png") no-repeat;
+  cursor: pointer;
 }
 .in:hover {
   background-image: url("./assets/Linkedin_active@2x.png");
@@ -856,7 +864,7 @@ footer {
 .pin {
   background: url("./assets/Pinterest@2x.png") no-repeat;
   display: inline-block;
-  margin-right: 0px;
+  cursor: pointer;
 }
 .pin:hover {
   background-image: url("./assets/Pinterest_active@2x.png");
