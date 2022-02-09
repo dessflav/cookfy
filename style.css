@@ -140,6 +140,8 @@ table {
   height: 100%;
   z-index: 1;
   display: none;
+  transition: 0.5s;
+  overflow-x: hidden;
 }
 
 .close {
@@ -349,7 +351,7 @@ h1 span {
 .receipt {
   display: block;
   background: url("./assets/Elemento_1.png") no-repeat center right;
-  width: 700px;
+  width: 750px;
   margin: 100px auto 54px;
   min-height: 221px;
   position: relative;
@@ -378,7 +380,88 @@ h1 span {
 }
 
 /* header */
+/* lightbox */
 
+.lightbox {
+  display: none;
+}
+.light-bg {
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  text-align: center;
+  z-index: 1;
+  opacity: 0.8;
+}
+.light-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 860px;
+  height: 400px;
+  box-shadow: 0px 0px 0px 8px rgba(0,0,0,0.3);
+  background-color: white;
+  z-index: 1001;
+  overflow: hidden;
+}
+.light-content button {
+  position: absolute;
+  z-index: 500;
+  right: 10px;
+  top: 10px;
+  background: none;
+  border: none;
+  font-size: 26px;
+  font-weight: bold;
+}
+.light_img {
+  float: left;
+  width: 60%;
+}
+.light-dir {
+  float: right;
+  width: 26%;
+  margin-top: 50px;
+  color: #555455;
+  font-size: 11px;
+  position: relative;
+  padding-right: 60px;
+  text-align: left;
+  line-height: 16px;
+
+}
+.light-dir h3 {
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 16px;
+}
+.light-dir h3 span {
+  color: var(--pink);
+}
+.light-action {
+  margin-top: 20px;
+  color: var(--pink);
+}
+.light-like {
+  border-radius: 19px;
+  border: solid 0.5px var(--pink);
+  background: url("assets/Like.png") no-repeat 13px center;
+  padding: 3px 20px 3px 24px;
+  text-align: center;
+  display: inline;
+}
+.light-ver {
+  display: inline;
+  background: url("assets/Seta_direita.png") no-repeat left center;
+  padding: 3px 20px 3px 14px;
+  margin-left: 20px;
+}
+/* fim lightbox */
 article,
 aside,
 details,
@@ -431,15 +514,16 @@ img {
 }
 
 .dish {
-  width: 266px;
+  width: 250px;
   float: right;
   height: 220px;
   text-align: center;
   position: relative;
   right: 10px;
+  cursor: pointer;
 }
 #dish-hover {
-  background: #fff url("assets/Seta_direita.png") 10px center no-repeat;
+  background: #fff url("assets/Seta_direita.png") 12px center no-repeat;
   width: 91%;
   color: var(--pink);
   font-size: 14px;
@@ -490,6 +574,8 @@ h2 {
   height: 110px;
 }
 
+
+/* carousel */
 #carousel {
   margin: 60px auto;
   width: 100%;
@@ -499,12 +585,12 @@ h2 {
 }
 
 .buttons{
-  /* display: block; */
   width: 200px;
   position: absolute;
   right: 27%;
   display: flex;
   justify-content: flex-start;
+  cursor: pointer;
 }
 
 .button-next {
@@ -515,7 +601,8 @@ h2 {
   border-radius: 60%;
   box-shadow: 3px 6px 6px 4px rgba(0, 0, 0, 0.16);
   background-color: white;
-
+  transition: background-color 0.7s;
+  
 }
 
 .button-prev{
@@ -526,38 +613,38 @@ h2 {
   border-radius: 60%;
   box-shadow: 3px 6px 6px 4px rgba(0, 0, 0, 0.16);
   margin-left: 20px;
-
+  transition: background-color 0.7s
 }
 .button-next:hover {
   background: url("./assets/left-arrow.svg") center no-repeat;
   background-color: var(--pink);
+  opacity: 1
 }
 
 .button-prev:hover {
-  background: url("./assets/right-arrow.png") center no-repeat;
+  background: url("./assets/Seta_esquerda_branca.png") center no-repeat;
   background-color: var(--pink);
+  transition: opacity 2s;
+  opacity: 1
 }
 
 .dish-content {
   position: relative;
-  box-shadow: 0 5px 5px 0 #797979;
+  box-shadow: 3px 5px 5px 3px #797979;
   float: left;
   width: 450px;
   margin-right: 50px;
   height: 240px;
   overflow: hidden;
-  vertical-align: middle;
-  position: relative;
+  /* vertical-align: middle; */
   z-index: 0;
+ 
 }
-.dish-content img {
-  object-fit: cover;
-}
+
 .dish-txt {
   font-weight: bold;
   text-align: left;
   color: var(--pink);
-
   font-size: 0.8em;
 }
 .dish-txt h3 {
@@ -597,7 +684,6 @@ h2 {
   position: absolute;
   bottom: 0px;
   left: 0;
-  /* z-index: 0; */
   text-align: left;
   opacity: 0;
 }
@@ -696,191 +782,7 @@ h2 {
   object-fit: cover;
 }
 
-/* lightbox */
 
-.lightbox {
-  display: none;
-}
-.light-bg {
-  background: rgba(0, 0, 0, 0.8);
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-  text-align: center;
-  z-index: 1;
-  opacity: 0.8;
-}
-.light-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 860px;
-  height: 400px;
-  box-shadow: 0px 0px 0px 8px rgba(0,0,0,0.3);
-  background-color: white;
-  z-index: 1001;
-  overflow: hidden;
-}
-.light-content button {
-  position: absolute;
-  z-index: 500;
-  right: 10px;
-  top: 10px;
-  background: none;
-  border: none;
-  font-size: 26px;
-  font-weight: bold;
-}
-.light_img {
-  float: left;
-  width: 60%;
-}
-.light-dir {
-  float: right;
-  width: 26%;
-  margin-top: 50px;
-  color: #555455;
-  font-size: 11px;
-  position: relative;
-  padding-right: 60px;
-  text-align: left;
-  line-height: 16px;
-
-}
-.light-dir h3 {
-  margin-bottom: 20px;
-  font-weight: bold;
-  font-size: 16px;
-}
-.light-dir h3 span {
-  color: var(--pink);
-}
-.light-action {
-  margin-top: 20px;
-  color: var(--pink);
-}
-.light-like {
-  border-radius: 19px;
-  border: solid 0.5px var(--pink);
-  background: url("assets/Like.png") no-repeat 13px center;
-  padding: 3px 20px 3px 24px;
-  text-align: center;
-  display: inline;
-}
-.light-ver {
-  display: inline;
-  background: url("assets/Seta_direita.png") no-repeat left center;
-  padding: 3px 20px 3px 14px;
-  margin-left: 20px;
-}
-
-/* carousel */
-
-.carousel {
-  margin-right: 15%;
-  margin-left: 15%;
-} 
-
-ul.slides {
-  display: block;
-  position: relative;
-  height: 600px;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  list-style: none;
-}
-
- .slides {
-  user-select: none;
-  -ms-user-select: none;
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  -webkit-touch-callout: none;
-}
-
-ul.slides input {
-  display: none;
-}
-
-.slide-container {
-  display: block;
-}
-
-.slide-image {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  opacity: 0;
-  transition: all 0.7s ease-in-out;
-}
-
-.slide-image img {
-  width: auto;
-  min-width: 100%;
-  height: 100%;
-}
-
-.carousel-controls {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 999;
-  font-size: 100px;
-  line-height: 600px;
-  color: #fff;
-}
-
-.carousel-controls label {
-  display: none;
-  position: absolute;
-  padding: 0 20px;
-  opacity: 0;
-  transition: opacity 0.2s;
-  cursor: pointer;
-}
-
-.slide-image:hover + .carousel-controls label {
-  opacity: 0.5;
-}
-
-.carousel-controls label:hover {
-  opacity: 1;
-}
-
-.carousel-controls .prev-slide {
-  width: 49%;
-  text-align: left;
-  left: 0;
-}
-
-.carousel-controls .next-slide {
-  width: 49%;
-  text-align: right;
-  right: 0;
-}
-
-input:checked + .slide-container .slide-image {
-  opacity: 1;
-  transform: scale(1);
-  transition: opacity 1s ease-in-out;
-}
-
-input:checked + .slide-container .carousel-controls label {
-  display: block;
-}
-
-input:checked + .slide-container .nav label {
-  display: block;
-}
 
 /* footer */
 footer {
