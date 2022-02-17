@@ -10,6 +10,11 @@
 </head>
 
 <body id="body">
+
+  <div class="preloader">
+    <div class="counter">0</div>
+  </div>
+
   <div class="sidebar" id="sidebarID">
     <img class="close" src="./assets/Fechar.png" alt="Botão para fechar a barra lateral" onclick="close_sidebar()">
     <div id="sidebar_profile">
@@ -36,7 +41,7 @@
       </div>
     </div>
   </div>
-
+  <div class="main inactive">
   <header>
     <div class="content">
     <div class="elemento-2"></div>
@@ -204,6 +209,13 @@
       </div>
     </div>
   </footer>
+</div>
+  <!------------Added jquery CDN--------------->
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous">
+  </script>
   <script src="script.js"></script>
 </body>
 </html> 

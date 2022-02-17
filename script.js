@@ -107,3 +107,25 @@ function moveToPrevSlide() {
   }
   updateSlidePosition();
 }
+
+/*
+    Function for preloader to increament
+    the value from 0 to 100 percentage 
+*/
+function counterloader()
+{
+    var countval = setInterval(function(){
+
+        var c = parseInt($('.counter').text());
+
+        $('.counter').text((++c).toString());
+        if(c == 100){
+            clearInterval(countval);
+            $('.counter').addClass('hide')
+            $('.preloader').addClass('active')
+            $('.main').removeClass('inactive')
+        }
+
+    },10); 
+}
+counterloader();

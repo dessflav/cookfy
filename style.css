@@ -808,3 +808,86 @@ footer {
 .pin:hover {
   background-image: url("./assets/Pinterest_active@2x.png");
 }
+
+/* 
+----------- Added A Preloader --------
+*/
+.preloader
+{
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100000000;
+  background: linear-gradient(45deg,rgba(2, 2, 2, 0.747) 50%,rgba(73, 73, 73, 0.849) 50%);
+  backdrop-filter: blur(15px);
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  overflow: hidden;
+}
+
+.preloader.active
+{
+   transform: translateY(-100%);
+   transition: ease-in-out 2s;
+   transition-delay: 1s;
+}
+
+.preloader::before
+{
+   content: "welcome to cookfy";
+   position: absolute;
+   text-align: center;
+   font-size: 8rem;
+   text-transform:capitalize;
+   color: rgba(0, 0, 0, 0.541);
+   font-weight: 800;
+}
+.counter
+{
+  position: relative;
+  color: rgb(255, 255, 255);
+  font-size: 10em;
+  font-family: 'Arial',sans-serif;
+  z-index: 1;
+}
+
+.counter::after
+{
+  content: '%';
+  font-size: 0.5em;
+}
+
+.hide
+{
+  opacity: 0;
+  transition: 1s;
+  pointer-events: none;
+}
+
+.main.inactive
+{
+  display: none;
+}
+
+/*
+------------changed color of scroll bar---------
+*/
+::-webkit-scrollbar {
+  width: 15px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 25px;
+  background-color: #7474748a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 61, 109); 
+  border-radius: 10px;
+}
