@@ -1,10 +1,28 @@
-# cookfy
+# Cookfy :cake:
 
-Cooking site - Cookfy :cake:
-Project developed for the recruitment process of Web Developer at Celero.
+<div style="display: flex;">
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/> 
+<img src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white"/> 
+<img src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white"/> 
+<div>
+<img src="assets/readme/cookfy (2).gif">
 
-Technologies used: HTML/CSS/JAVASCRIPT
-![cookfy-sidebar](https://user-images.githubusercontent.com/28829240/153290782-3c38aacb-098e-4341-aab9-8dbb0df000b7.png)
-![cookfy-initial-page](https://user-images.githubusercontent.com/28829240/153290923-e4b85587-ca0f-4e6e-918d-1f9d4cc467c3.png)
+### About Cookfy
+  Project developed as a web developer challenge, by Celero.
+Challenges:
+- Consume an API that loads a random user data every time the page loads (name, e-mail, phone) and change the profile picture based on the gender of the user
+- Follow the website mockup
+- use PURE JavaScript, HTML AND CSS, without the help of frameworks and libraries
+- Add animations to the components using pure JS.
 
-made with dedication :star_struck: :muscle: Andressa Flávia
+
+  
+### Tools Used
+  The main framework used in building the TinDog website is JavaScript Vanilla, HTML and CSS.
+  
+Made with :mechanical_arm: :blue_heart: Andressa Flávia
+
+<div style="display: flex;" >
+<img style="height:200px; weight:200px;"src="assets/readme/cookfy-initial-page.png"/>
+<img style="height:200px; weight:200px;" src="assets/readme/cookfy-sidebar.png"/>
+</div>
